@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import { Container, Navbar as NavbarBootstrap, Offcanvas, Nav} from "react-bootstrap"
 import { Link, useLocation } from "react-router-dom"
-import avatarPng from "../../images/user.png"
+import avatarPng from "../../assets/images/user.png"
 
 const Navbar = () => {
   const location = useLocation()
