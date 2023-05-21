@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <NavbarBootstrap bg="light" expand="true">
       <Container>
-        <NavbarBootstrap.Brand>Mitra Soft Task</NavbarBootstrap.Brand>
         <NavbarBootstrap.Toggle />
+        <NavbarBootstrap.Brand>Mitra Soft Task</NavbarBootstrap.Brand>
         <NavbarBootstrap.Offcanvas placement="start">
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu</Offcanvas.Title>

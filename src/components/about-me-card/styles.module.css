@@ -1,0 +1,9 @@
+.aboutMeCard {
+    width: 260px;
+    background-color: #f4ede7;
+}
+
+.picture {
+    max-width: 50%;
+    border-radius: 50%;
+}

@@ -1,0 +1,16 @@
+.aboutMePage {
+    min-height: calc(100vh - 56px);
+}
+
+.leftBg {
+    background-color: #e6dace;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px 0;
+
+    background-color: rgb(210, 210, 210);
+}
