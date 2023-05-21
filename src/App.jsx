@@ -2,13 +2,17 @@ import { Route, Routes } from "react-router-dom"
 import "./App.css"
 import HomePage from "./pages/home"
 import AboutMePage from "./pages/about-me"
+import Navbar from "./components/navbar/Navbar"
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about-me" element={<AboutMePage />} />
-    </Routes>
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about-me" element={<AboutMePage />} />
+      </Routes>
+    </div>
   )
 }
 
