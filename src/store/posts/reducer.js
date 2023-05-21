@@ -14,6 +14,14 @@ export const postsReducer = (state = initialState, action) => {
     case postsActions.SET_POSTS:
       return { ...state, posts: action.payload, loading: false }
 
+    case postsActions.SET_COMMENTS:
+      const { postId, comments } = action.payload
+      const newPosts = state.posts.map((post) =>
+        post.id === postId ? { ...post, comments } : post
+      )
+
+      return { ...state, posts: newPosts }
+
     default:
       return state
   }
@@ -31,4 +39,14 @@ export const fetchPosts = () => ({
 export const setPosts = (posts) => ({
   type: postsActions.SET_POSTS,
   payload: posts,
+})
+
+export const fetchComments = (postId) => ({
+  type: postsActions.FETCH_COMMENTS,
+  payload: postId,
+})
+
+export const setComments = (postId, comments) => ({
+  type: postsActions.SET_COMMENTS,
+  payload: { postId, comments },
 })

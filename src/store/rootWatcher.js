@@ -1,7 +1,7 @@
-import {all, fork} from 'redux-saga/effects'
+import { all, fork } from "redux-saga/effects"
 
-import { watchFetchPosts } from "./posts/sagas"
+import { watchFetchComments, watchFetchPosts } from "./posts/sagas"
 
 export function* rootWatcher() {
-  yield all([fork(watchFetchPosts)])
+  yield all([fork(watchFetchPosts), fork(watchFetchComments)])
 }
