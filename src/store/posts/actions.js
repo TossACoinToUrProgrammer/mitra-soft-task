@@ -1,0 +1,5 @@
+const FETCH_POSTS = "FETCH_POSTS"
+const SET_POSTS = "SET_POSTS"
+const TOGGLE_LOADER = "TOGGLE_LOADER"
+
+export const postsActions = { FETCH_POSTS, SET_POSTS, TOGGLE_LOADER }
