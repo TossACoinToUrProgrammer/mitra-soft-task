@@ -1,0 +1,9 @@
+const FETCH_USER = "FETCH_USER"
+const SET_USER = "SET_USER"
+const TOGGLE_USER_LOADER = "TOGGLE_USER_LOADER"
+
+export const usersActions = {
+  FETCH_USER,
+  SET_USER,
+  TOGGLE_USER_LOADER,
+}
