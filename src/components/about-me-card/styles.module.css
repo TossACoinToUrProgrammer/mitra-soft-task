@@ -1,9 +1,16 @@
 .aboutMeCard {
     width: 260px;
-    background-color: #f4ede7;
+    background: linear-gradient(90deg, rgba(125, 165, 238, 1) 35%, rgba(0, 212, 255, 1) 100%);
 }
 
 .picture {
-    max-width: 50%;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
+    overflow: hidden;
+    background-color: gray;
+}
+
+.picture img {
+    max-width: 100%;
 }

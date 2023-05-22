@@ -18,20 +18,19 @@ const PostItem = ({ post }) => {
   }
 
   return (
-    <Col className="mb-5" xl="6" lg="8">
-      <div className="d-flex align-items-center mb-2">
-        <Link to={`/user/${post.userId}`} className="me-3 block">
-          <img
-            src={avatarPng}
-            alt="avatar placeholder"
-          />
-        </Link>
-        <span className={`fw-bolder fs-5 ${styles.postTitle}`}>
-          {post.title}
-        </span>
+    <Col className={`${styles.cardWrapper} mb-5`} xl="6" lg="8">
+      <div className={styles.card}>
+        <div className="d-flex align-items-center mb-2">
+          <Link to={`/user/${post.userId}`} className="me-3 block">
+            <img src={avatarPng} alt="avatar placeholder" />
+          </Link>
+          <span className={`fw-bolder fs-5 ${styles.postTitle}`}>
+            {post.title}
+          </span>
+        </div>
+        <p>{post.body}</p>
+        <CommentsAccordion getComments={getComments} comments={post.comments} />
       </div>
-      <p>{post.body}</p>
-      <CommentsAccordion getComments={getComments} comments={post.comments} />
     </Col>
   )
 }

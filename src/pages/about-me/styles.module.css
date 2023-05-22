@@ -1,9 +1,10 @@
 .aboutMePage {
     min-height: calc(100vh - 56px);
+    background-color: #f1f1f1;
 }
 
 .leftBg {
-    background-color: #e6dace;
+    background-color: white;
 }
 
 .footer {

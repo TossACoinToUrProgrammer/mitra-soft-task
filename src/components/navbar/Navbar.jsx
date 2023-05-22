@@ -1,7 +1,10 @@
 import React, { useEffect } from "react"
 import { Container, Navbar as NavbarBootstrap, Offcanvas, Nav} from "react-bootstrap"
 import { Link, useLocation } from "react-router-dom"
+
+import styles from './styles.module.css'
 import avatarPng from "../../assets/images/user.png"
+import { myEmail } from "../../constants"
 
 const Navbar = () => {
   const location = useLocation()
@@ -13,10 +16,10 @@ const Navbar = () => {
   }, [location])
 
   return (
-    <NavbarBootstrap bg="light" expand="true">
+    <NavbarBootstrap className={styles.navbar} expand="true">
       <Container>
         <NavbarBootstrap.Toggle />
-        <NavbarBootstrap.Brand>Mitra Soft Task</NavbarBootstrap.Brand>
+        <NavbarBootstrap.Brand className="text-white">Mitra Soft Task</NavbarBootstrap.Brand>
         <NavbarBootstrap.Offcanvas placement="start">
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Menu</Offcanvas.Title>
@@ -36,8 +39,8 @@ const Navbar = () => {
             <div className="d-flex flex-column justify-content-center">
               <span>Arlen Manasov</span>
               <span>
-                <Link to="mailto:arlen.manasov@icloud.com" className="text-decoration-none">
-                  arlen.manasov@icloud.com
+                <Link to={`mailto:${myEmail}`} className="text-decoration-none">
+                  {myEmail}
                 </Link>
               </span>
             </div>
