@@ -1,0 +1,5 @@
+export const myEmail = "arlen.manasov@icloud.com"
+export const myGithub = "https://github.com/TossACoinToUrProgrammer"
+export const myLinkedin = "https://www.linkedin.com/in/arlen-manasov/"
+export const myPhoneNumber = "+996(706) 05-08-00"
+export const myLocation = "Kyrgyzstan, Bishkek"

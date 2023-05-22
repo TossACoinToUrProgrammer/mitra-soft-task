@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap"
 
 import styles from "./styles.module.css"
 import AboutMeCard from "../../components/about-me-card/AboutMeCard"
+import { myLocation, myPhoneNumber } from "../../constants"
 
 const AboutMePage = () => {
   return (
@@ -28,11 +29,11 @@ const AboutMePage = () => {
           <Container className="d-flex justify-content-end">
             <div className="text-center me-5">
               <b>Location</b> <br />
-              <span>Kyrgyzstan, Bishkek</span>
+              <span>{myLocation}</span>
             </div>
             <div className="text-center">
               <b>Phone number</b> <br />
-              <span>+996(706) 05-08-00</span>
+              <span>{myPhoneNumber}</span>
             </div>
         </Container>
         </div>
