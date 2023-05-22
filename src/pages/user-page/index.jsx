@@ -9,10 +9,11 @@ import { fetchPosts } from "../../store/posts/reducer"
 
 const UserPage = () => {
   const { userId } = useParams()
+  const [currentUser, setCurrentUser] = useState()
+
   const { posts, loading: postsLoading } = useSelector((state) => state.posts)
   const { users, loading } = useSelector((state) => state.users)
   const dispatch = useDispatch()
-  const [currentUser, setCurrentUser] = useState()
 
   const userPosts = useMemo(
     () => posts.filter((post) => post.userId == userId),
@@ -21,6 +22,7 @@ const UserPage = () => {
 
   useEffect(() => {
     if (currentUser) return
+
     const foundUser = users.find((user) => user.id == userId)
     if (!foundUser) {
       dispatch(fetchUser(userId))
