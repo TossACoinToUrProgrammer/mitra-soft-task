@@ -8,7 +8,7 @@ function* fetchUser({ payload }) {
   try {
     yield put(toggleLoader(true))
     yield delay(500)
-    const response = yield call(() => getUserReq(payload))
+    const response = yield call(getUserReq, payload)
     yield put(setUser(response.data))
   } catch (error) {
     yield put(toggleLoader(false))

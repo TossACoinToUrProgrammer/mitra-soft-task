@@ -8,7 +8,7 @@ function* fetchPosts() {
   try {
     yield put(togglePostsLoader(true))
     yield delay(500)
-    const response = yield call(() => getPostsReq())
+    const response = yield getPostsReq()
     yield put(setPosts(response.data))
   } catch (error) {
     yield put(togglePostsLoader(false))
@@ -22,7 +22,7 @@ export function* watchFetchPosts() {
 function* fetchComments({ payload }) {
   try {
     yield delay(500)
-    const response = yield call(() => getCommentsReq(payload))
+    const response = yield call(getCommentsReq, payload)
     yield put(setComments(payload, response.data))
   } catch (error) {
     yield put(setComments(payload, []))
