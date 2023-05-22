@@ -8,12 +8,12 @@ import { myLocation, myPhoneNumber } from "../../constants"
 const AboutMePage = () => {
   return (
     <Container fluid className={`${styles.aboutMePage} d-flex py-4 px-0 position-relative`}>
-      <Col sm="5" className={`${styles.leftBg} position-absolute top-0 bottom-0`}></Col>
-      <Container className="position-relative d-flex justify-content-center align-items-center pb-5">
-        <div className="me-3">
+      <Col xs="6" md="5" className={`${styles.leftBg} position-absolute top-0 bottom-0`}></Col>
+      <Container className="position-relative d-flex flex-column flex-md-row justify-content-center align-items-center pb-5">
+        <div className="me-3 mb-3">
           <AboutMeCard />
         </div>
-        <Col sm="3">
+        <Col xs="11" sm="8" md="3" className="mb-3">
           <h1>Hello!</h1>
           <p>
             I'm Frontend developer from Kyrgyzstan, ready for remote work.<br />
@@ -26,7 +26,7 @@ const AboutMePage = () => {
         </Col>
       </Container>
         <div className={styles.footer}>
-          <Container className="d-flex justify-content-end">
+          <Container className="d-flex justify-content-center justify-content-md-end">
             <div className="text-center me-5">
               <b>Location</b> <br />
               <span>{myLocation}</span>
